@@ -1,0 +1,12 @@
+img {
+    display: block;
+    width: 400px;
+    height: 300px;
+    align-content: center;
+}
+
+table, th, td {
+    border: 5px solid black;
+    text-align: center;
+  }
+

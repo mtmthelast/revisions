@@ -1,0 +1,26 @@
+<div class="primary">
+    <div class="header">
+        <h2>Menu</h2>
+    </div>
+    <div class="body">
+        <table class="table-set">
+            <thead>
+                <tr>
+                    <th>Food Name</th>
+                    <th>Food ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let m of meals | async">
+                   
+                    <td>{{m.name}}</td>
+                    <td>{{m.id}}</td>
+                    <td><img src="{{m.image}}" sizes="40px" alt="<?php echo $meal->name; ?>"></td>
+                   <td><button (click)="deleteMeal(m.id)" class="btn_done" style="margin-left: 20px">Delete</button></td>
+                    <td><button (click)="changeMeal(m.id)" class="btn_change" style="margin-left: 20px">Update</button></td>
+                    <td><button (click)="mealDetails(m.id)" class="btn_info" style="margin-left: 20px">Details</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
